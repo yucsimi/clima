@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Componentes/Helper";
 import Formulario from "./Componentes/Forms";
 import Clima from "./Componentes/Clima";
@@ -11,7 +11,7 @@ function App() {
   const [consultar, guardarConsultar] = useState(false);
   const [resultado, guardarResultado] = useState({});
   const [error, guardarError] = useState(false);
-  const {ciudad, pais} = busqueda;
+  const { ciudad, pais } = busqueda;
 
   useEffect(() => {
     const consultarAPI = async () => {
@@ -34,7 +34,7 @@ function App() {
     };
 
     consultarAPI();
-  }, [consultar]);
+  }, [consultar, ciudad, pais]);
 
   let componente;
   if (error) {
