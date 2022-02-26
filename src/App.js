@@ -34,7 +34,8 @@ function App() {
     };
 
     consultarAPI();
-  }, [consultar, ciudad, pais]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [consultar]);
 
   let componente;
   if (error) {
